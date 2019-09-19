@@ -17,4 +17,5 @@ DB_PASSWORD=gvandrqz_ct_life
 3. composer install
 4. npm install
 5. npm run dev
+
 пример http://metal.gvandri.ru/
