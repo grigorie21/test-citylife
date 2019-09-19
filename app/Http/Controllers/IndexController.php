@@ -121,9 +121,9 @@ class IndexController extends Controller
         Chapter::insert($chaptersArr);
     }
     public function list(Request $request){
-        $model = Chapter::all();
+        $model = Chapter::where('id','<',10)->get()->sortBy('date');
 
-//        dd($model);
+        dd($model);
         return view('index', ['model' => $model]);
     }
 }
