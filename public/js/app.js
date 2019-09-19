@@ -2142,9 +2142,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['model'],
   mounted: function mounted() {
@@ -2156,9 +2153,19 @@ __webpack_require__.r(__webpack_exports__);
       loading: true,
       columns: ['serial_title_ru', 'serial_title_en', 'chapter_title_ru', 'chapter_title_en', 'url', 'date'],
       tableData: this.model,
+      // sortOrder: [
+      //     {
+      //         field: 'chapter_title_ru',
+      //         direction: 'asc'
+      //     }
+      // ],
       options: {
         perPage: 10,
-        filterable: true
+        filterable: true,
+        orderBy: {
+          column: 'date',
+          ascending: false
+        }
       }
     };
   },
@@ -44847,42 +44854,6 @@ var render = function() {
     "div",
     { staticClass: "container" },
     [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-6" }, [
-          _vm._v("\ncxvcxvcxvcxvxcv\n                "),
-          _vm._v(" "),
-          _c("div", { staticClass: "input-group mb-3" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.searchWord,
-                  expression: "searchWord"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                name: "searchWord",
-                type: "text",
-                placeholder: "Введите слово"
-              },
-              domProps: { value: _vm.searchWord },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.searchWord = $event.target.value
-                }
-              }
-            })
-          ])
-        ])
-      ]),
-      _vm._v(" "),
       _c("v-client-table", {
         attrs: {
           data: _vm.tableData,
@@ -44894,20 +44865,7 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c(
-        "span",
-        { staticClass: "input-group-text", attrs: { id: "basic-addon1" } },
-        [_vm._v("Поиск")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id="app">
-    <index :model="{{$model}}"></index>
+    <index :model="{{ $model }}"></index>
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
