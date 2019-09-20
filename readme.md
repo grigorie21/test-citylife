@@ -19,3 +19,6 @@ DB_PASSWORD=gvandrqz_ct_life
 5. npm run dev
 
 пример http://metal.gvandri.ru/
+
+команда для парсинга php artisan parse
+(парсятся первые 10 сираниц для парсинга всех надо раскоментировать строчку)
